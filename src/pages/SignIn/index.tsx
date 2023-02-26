@@ -1,6 +1,6 @@
-import { Button, Form, Input } from 'antd'
-import React, { useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Button, Form, Input } from 'antd';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './styles.scss'
 
 interface ISignInData {
@@ -12,9 +12,9 @@ export const SignIn: React.FC = () => {
     const navigate = useNavigate();
 
     const onFinish = useCallback((values: ISignInData) => {
-        localStorage.setItem('user', JSON.stringify(values.user))
-        navigate("/home")
-    },[navigate])
+        localStorage.setItem('user', JSON.stringify(values.user));
+        navigate("/home");
+    },[navigate]);
 
     return (
         <div id="SignIn">

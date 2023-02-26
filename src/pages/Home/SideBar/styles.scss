@@ -1,0 +1,38 @@
+#SideBar{
+    width: 256px;
+    height: 100vh;
+
+    background-color: #f7f7f7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem 0;
+
+    border-right: 1px solid black;
+
+    div{
+        height: 10%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-bottom: 1px solid black;
+        label{
+            margin: auto;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    div:nth-child(3) {
+        min-height: 10%;
+        height: auto;
+        padding: 1rem 0;
+        flex-direction: row;
+    }
+}
