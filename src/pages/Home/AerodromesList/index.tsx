@@ -5,7 +5,6 @@ import { IAerodrome } from '../../../interfaces/AerodromeInterface'
 import { DMS_COORDENATES_REGEX } from '../../../utils/regexUtils';
 import './styles.scss'
 
-
 const columns = [
     {
         title: 'Name',
@@ -54,8 +53,7 @@ export const AerodromesList: React.FC = () => {
                 });
             });
             setDataSource(newDataSource);
-        }
-        else{
+        }else{
             setDataSource([
                 {
                     key: null,
@@ -68,7 +66,6 @@ export const AerodromesList: React.FC = () => {
             ])
         }
     }, [jsonData])
-
 
     return (
         <div id="AerodromesList">

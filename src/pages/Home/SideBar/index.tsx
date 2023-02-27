@@ -19,7 +19,7 @@ export const SideBar: React.FC<IProps> = (props : IProps) => {
 
     return (
         <div id="SideBar">
-            <div onClick={() => props.selectPage('MapSection')}>
+            <div onClick={() => props.selectPage('mapSection')}>
                 <label>Welcome</label>
                 <label>{signedEmail}</label>
             </div>
