@@ -50,7 +50,7 @@ export const SignIn: React.FC = () => {
                         type="primary"
                         htmlType="submit"
                     >
-                        Submit
+                        Sign In
                     </Button>
                 </Form.Item>
             </Form>

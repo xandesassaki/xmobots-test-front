@@ -23,7 +23,7 @@ export const Register: React.FC = () => {
             <Form
                 className="form"
                 name="register"
-                labelCol={{ span: 8 }}
+                labelCol={{ span: 5 }}
                 wrapperCol={{ span: 24}}
                 style={{width: "50%"}}
                 onFinish={onFinish}
@@ -52,7 +52,7 @@ export const Register: React.FC = () => {
                     label="Password"
                     name="password"
                     rules={[
-                            {required:true, message: 'Insert a password.'},
+                            {required: true, message: 'Insert a password.'},
                             {min: 6, message: 'Invalid password.'}
                         ]}
                 >
@@ -80,7 +80,7 @@ export const Register: React.FC = () => {
                         htmlType="submit"
                         disabled={hasError}
                     >
-                        Submit
+                        Register
                     </Button>
                 </Form.Item>
             </Form>
