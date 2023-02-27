@@ -31,7 +31,7 @@ const columns = [
         dataIndex: 'runway_amount',
         key: 'runway_amount'
     }
-]
+];
 
 export const AerodromesList: React.FC = () => {
     const { jsonData } = useAerodromeData();
@@ -65,7 +65,7 @@ export const AerodromesList: React.FC = () => {
                 }
             ])
         }
-    }, [jsonData])
+    }, [jsonData]);
 
     return (
         <div id="AerodromesList">

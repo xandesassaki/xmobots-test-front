@@ -10,7 +10,7 @@ import { IMapPoint } from '../../../interfaces/MapInformationInterface';
 export const MapSection: React.FC = () => {
     const { jsonData } = useAerodromeData();
     const [mapPoint, setMapPoint] = useState<IMapPoint[]>([]);
-    const [descriptions, setDescriptions] = useState<String[]>([])
+    const [descriptions, setDescriptions] = useState<String[]>([]);
 
     useEffect(()=>{
         if(jsonData){
@@ -18,14 +18,12 @@ export const MapSection: React.FC = () => {
             const newDescription: String[] = [];
 
             jsonData.aerodromes.forEach((aerodrome: IAerodrome) => {
-                newDescription.push(aerodrome.description)
+                newDescription.push(aerodrome.description);
 
                 const isolatedDMS = aerodrome.description.match(DMS_COORDENATES_REGEX);
                 if(isolatedDMS){
                     const formattedCooordinates = formatDMSToLatLon(isolatedDMS[0]);
-                    newMapPoint.push(formattedCooordinates)
-                } else {
-                    newMapPoint.push({latitude: -10.985277777777778, longitude: -4.2844444444444445})
+                    newMapPoint.push(formattedCooordinates);
                 }
             });
             setDescriptions(newDescription);

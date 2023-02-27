@@ -2,7 +2,7 @@ export const formatDMSToLatLon = (dms: string) => {
     const [lat, lon] = dms.split('/');
 
     const latDeg = Math.abs(parseInt(lat)/10000);
-    const latMin = Math.abs(parseInt(lat) % 10000 / 100);;
+    const latMin = Math.abs(parseInt(lat) % 10000 / 100);
     const latSec = Math.abs(parseFloat(lat) % 1 * 60).toFixed(2);
     const latDec = (parseFloat(latSec) + (latMin * 60))/3600;
 
@@ -17,5 +17,5 @@ export const formatDMSToLatLon = (dms: string) => {
     const lonDirection = lon.slice(-1) === ('W') ? -1 : 1;
     const longitude = (lonDec + lonDeg) * lonDirection;
 
-    return { latitude, longitude };
+    return { latitude, longitude }
 }
